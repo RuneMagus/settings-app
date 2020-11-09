@@ -80,16 +80,15 @@ export class SettingsComponent implements OnInit {
     }
   ];
 
-  constructor(private readonly httpClient: HttpClient, private readonly columnFilterService: ColumnFilterService) {
+  constructor(private readonly httpClient: HttpClient, 
+    private readonly columnFilterService: ColumnFilterService) {
     columnFilterService.registerFilter('string', TextFilterComponent);
     columnFilterService.registerFilter('date', DateFilterComponent);
     columnFilterService.registerFilter('number', NumberFilterComponent);
   }
   
   ngOnInit(): void {
-    const resourcePath = 'https://services.odata.org/V4/OData/OData.svc/Products';
-
-    this.dataSource = new ODataDataSource(this.httpClient, resourcePath);
+    this.dataSource = new ODataDataSource(this.httpClient, environment.settingsUrl);
   }
 
 }
