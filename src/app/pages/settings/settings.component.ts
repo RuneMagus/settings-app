@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ColumnConfig, ColumnFilterService, DynamicTableModule } from 'material-dynamic-table';
+import { ColumnConfig, ColumnFilterService } from 'material-dynamic-table';
 import { ODataDataSource } from 'odata-data-source';
 import { DateFilterComponent } from '../filters/date-filter/date-filter.component';
 import { NumberFilterComponent } from '../filters/number-filter/number-filter.component';
 import { TextFilterComponent } from '../filters/text-filter/text-filter.component';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-settings',

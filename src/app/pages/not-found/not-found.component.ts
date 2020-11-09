@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() { }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   ngOnInit(): void {
   }
 

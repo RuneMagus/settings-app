@@ -7,6 +7,7 @@ export class DateFilter implements ODataFilter {
     public constructor(private readonly column: string) {
     }
     
+    // eslint-disable-next-line @typescript-eslint/ban-types
     getFilter(): object {
         const filter = {};
         

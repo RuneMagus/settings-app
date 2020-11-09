@@ -7,19 +7,12 @@ export class TextFilter implements ODataFilter {
         this.value = '';
     }
     
+    // eslint-disable-next-line @typescript-eslint/ban-types
     getFilter(): object {
         const filter = {};
 
         filter[this.column] = { contains: this.value };
         
         return filter;
-    }
-
-    getDescription() {
-        if (!this.value) {
-            return null;
-        }
-
-        return `contains '${this.value}'`;        
     }
 }

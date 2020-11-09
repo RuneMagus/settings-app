@@ -17,12 +17,12 @@ export class NumberFilterComponent implements OnInit {
         private readonly dialogRef: MatDialogRef<NumberFilterComponent>,
         @Inject(MAT_DIALOG_DATA) private readonly filterData: ColumnFilter) { }
 
-    ngOnInit() {
+    ngOnInit() : void {
         this.displayName = this.filterData.column.displayName;
         this.model = this.filterData.filter || new NumberFilter(this.filterData.column.name);
     }
 
-    apply() {
+    apply() : void {
         if (this.model.value) {
             this.dialogRef.close(this.model);
         } else {

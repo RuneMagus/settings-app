@@ -17,12 +17,12 @@ export class DateFilterComponent implements OnInit {
         private readonly dialogRef: MatDialogRef<DateFilterComponent>,
         @Inject(MAT_DIALOG_DATA) private readonly filterData: ColumnFilter) { }
 
-    ngOnInit() {
+    ngOnInit() : void {
         this.displayName = this.filterData.column.displayName;
         this.model = this.filterData.filter || new DateFilter(this.filterData.column.name);
     }
 
-    apply() {
+    apply() : void {
         if (this.model.fromDate || this.model.toDate) {
             this.dialogRef.close(this.model);
         } else {
