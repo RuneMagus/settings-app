@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://mgsdevops.z33.web.core.windows.net",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }

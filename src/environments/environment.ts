@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  settingsUrl: 'https://services.odata.org/V4/OData/OData.svc/Products'
+  // settingsUrl: 'https://services.odata.org/V4/OData/OData.svc/Products' <-- for testing filtering, etc.
+  settingsUrl: '/api' // <-- set to this to use proxy.
 };
 
 /*
